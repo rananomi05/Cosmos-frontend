@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import {ROUTES} from "@/app/share/route";
+import { ROUTES } from "@/app/share/routes";
 import Link from "next/link";
 
 const SignInPage = () => {
@@ -52,7 +52,7 @@ const SignInPage = () => {
         {/* Glass morphism card */}
         <div className="bg-[#1b2130] backdrop-blur-xl rounded-3xl shadow-2xl p-8 space-y-6 border border-white/20">
           {/* Logo/Icon */}
-          
+
 
           <div className="text-center">
             <h1 className="text-3xl font-bold text-white bg-clip-text text-transparent mb-2">
@@ -109,7 +109,7 @@ const SignInPage = () => {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
 
-                
+
               </div>
               <input
                 id="password"
@@ -151,7 +151,7 @@ const SignInPage = () => {
         </div>
 
         {/* Footer text */}
-        
+
       </div>
     </div>
   );
