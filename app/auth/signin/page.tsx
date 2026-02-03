@@ -62,83 +62,85 @@ const SignInPage = () => {
           </div>
 
           {/* Social Sign In */}
-          <div className="space-y-3">
-            <button
-              onClick={handleGoogleSignIn}
-              disabled={loading}
-              className="w-full h-12 flex items-center justify-center bg-white border-2 border-gray-200 rounded-xl hover:border-[#7C3AED] hover:shadow-lg transition-all group disabled:opacity-50"
-            >
-              <FcGoogle className="mr-3 h-5 w-5" />
-              <span className="font-medium text-gray-700 group-hover:text-[#7C3AED]">Continue with Google</span>
-            </button>
+          <form onSubmit={handleLogin} className="space-y-6">
+            <div className="space-y-3">
+              <button
+                onClick={handleGoogleSignIn}
+                disabled={loading}
+                className="w-full h-12 flex items-center justify-center bg-white border-2 border-gray-200 rounded-xl hover:border-[#7C3AED] hover:shadow-lg transition-all group disabled:opacity-50"
+              >
+                <FcGoogle className="mr-3 h-5 w-5" />
+                <span className="font-medium text-gray-700 group-hover:text-[#7C3AED]">Continue with Google</span>
+              </button>
 
-            <button
-              onClick={handleGithubSignIn}
-              disabled={loading}
-              className="w-full h-12 flex items-center justify-center bg-white border-2 border-gray-200 rounded-xl hover:border-[#7C3AED] hover:shadow-lg transition-all group disabled:opacity-50"
-            >
-              <FaGithub className="mr-3 h-5 w-5 " />
-              <span className="font-medium text-black">Continue with GitHub</span>
-            </button>
-          </div>
-
-          {/* Divider */}
-          <div className="relative my-6">
-            <div className="absolute inset-0 flex items-center">
-              <span className="w-full border-t border-gray-300" />
-            </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-[#1b2130] px-3 text-gray-500 font-medium">Or continue with email</span>
-            </div>
-          </div>
-
-          {/* Email Login Form */}
-          <div className="space-y-4">
-            <div className="space-y-2">
-
-              <input
-                id="email"
-                type="email"
-                placeholder="name@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full h-12 px-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#7C3AED] focus:bg-white transition-all"
-              />
+              <button
+                onClick={handleGithubSignIn}
+                disabled={loading}
+                className="w-full h-12 flex items-center justify-center bg-white border-2 border-gray-200 rounded-xl hover:border-[#7C3AED] hover:shadow-lg transition-all group disabled:opacity-50"
+              >
+                <FaGithub className="mr-3 h-5 w-5 " />
+                <span className="font-medium text-black">Continue with GitHub</span>
+              </button>
             </div>
 
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-
-
+            {/* Divider */}
+            <div className="relative my-6">
+              <div className="absolute inset-0 flex items-center">
+                <span className="w-full border-t border-gray-300" />
               </div>
-              <input
-                id="password"
-                type="password"
-                placeholder="••••••••"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                minLength={6}
-                className="w-full h-12 px-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#7C3AED] focus:bg-white transition-all"
-              />
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-[#1b2130] px-3 text-gray-500 font-medium">Or continue with email</span>
+              </div>
             </div>
 
-            <button
-              onClick={handleLogin}
-              disabled={loading}
-              className="w-full h-12 bg-gradient-to-r from-[#7C3AED] to-purple-600 hover:from-purple-700 hover:to-purple-700 text-white font-semibold rounded-xl flex items-center justify-center transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-            >
-              {loading ? (
-                <>
-                  <AiOutlineLoading3Quarters className="mr-2 h-5 w-5 animate-spin" />
-                  Signing In...
-                </>
-              ) : (
-                "Sign In"
-              )}
-            </button>
-          </div>
+            {/* Email Login Form */}
+            <div className="space-y-4">
+              <div className="space-y-2">
+
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="name@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="w-full h-12 px-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#7C3AED] focus:bg-white transition-all"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+
+
+                </div>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="••••••••"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  minLength={6}
+                  className="w-full h-12 px-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#7C3AED] focus:bg-white transition-all"
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full h-12 bg-gradient-to-r from-[#7C3AED] to-purple-600 hover:from-purple-700 hover:to-purple-700 text-white font-semibold rounded-xl flex items-center justify-center transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+              >
+                {loading ? (
+                  <>
+                    <AiOutlineLoading3Quarters className="mr-2 h-5 w-5 animate-spin" />
+                    Signing In...
+                  </>
+                ) : (
+                  "Sign In"
+                )}
+              </button>
+            </div>
+          </form>
 
           {/* Sign Up Link */}
           <div className="text-center pt-4 border-t border-gray-200">
