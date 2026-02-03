@@ -30,7 +30,7 @@ const Refund = () => {
                         <p className="text-foreground leading-relaxed">
                             If a payment is successful but credits are not assigned due to a technical error,
                             please contact us at{" "}
-                            <span className="text-[#FBBF24]">[Your Email]</span> with your transaction ID.
+                            <a className="text-[#FBBF24]">mehdinaqvii@claritycosmos.com</a> with your transaction ID.
                             We will manually assign the credits within 24 hours.
                         </p>
                     </div>
