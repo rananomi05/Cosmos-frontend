@@ -7,6 +7,7 @@ import { ASSETS } from "../share/assets";
 import Button from "@/app/components/button";
 import { FaCommentMedical } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
+import { toast } from "react-hot-toast";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,11 +33,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed border-bottom border-gray-400 top-0 left-0 w-full z-50 border-b transition-all duration-300 ${
-        scrolled
-          ? "bg-linear-to-r from-[#1E2433]/90 via-[#3D2F78]/90 to-[#1E2433]/90 border-[#2B3142] backdrop-blur-md"
-          : "bg-transparent "
-      }`}
+      className={`fixed border-bottom border-gray-400 top-0 left-0 w-full z-50 border-b transition-all duration-300 ${scrolled
+        ? "bg-linear-to-r from-[#1E2433]/90 via-[#3D2F78]/90 to-[#1E2433]/90 border-[#2B3142] backdrop-blur-md"
+        : "bg-transparent "
+        }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
@@ -81,7 +81,7 @@ export default function Header() {
 
         {/* Desktop CTA Button */}
         <Link href="" className="hidden md:block">
-          <Button className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white flex items-center gap-2 px-5 py-2 rounded-lg text-md font-semibold transition-all duration-300 shadow-md">
+          <Button onClick={() => toast.success("Feature Coming Soon ")} className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white flex items-center gap-2 px-5 py-2 rounded-lg text-md font-semibold transition-all duration-300 shadow-md">
             <FaCommentMedical className="w-3 h-3 text-white" />
             <span>Try Beta Free</span>
           </Button>
@@ -107,9 +107,8 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-[76px] right-0 h-[calc(100vh-76px)] w-64 bg-linear-to-b from-[#1E2433] via-[#3D2F78] to-[#1E2433] transform transition-transform duration-300 ease-in-out z-40 md:hidden ${
-          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-[76px] right-0 h-[calc(100vh-76px)] w-64 bg-linear-to-b from-[#1E2433] via-[#3D2F78] to-[#1E2433] transform transition-transform duration-300 ease-in-out z-40 md:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <nav className="flex flex-col p-6 gap-6">
           {NAV_LINKS.map((link, index) => (

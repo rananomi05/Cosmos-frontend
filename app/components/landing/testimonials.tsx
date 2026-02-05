@@ -17,7 +17,7 @@ const Testimonials = () => {
       role: "FAANG Engineer",
       quote:
         "I feel tired a lot when I watch videos, because it honestly takes time a lot to learn from many videos in youtube.",
-      avatar: "https://img.freepik.com/photos-gratuite/ecolier-livre-parc_23-2148199240.jpg",
+      avatar: "https://t3.ftcdn.net/jpg/03/28/49/70/360_F_328497000_mAVDgZQtgWQeH1Zzr6lb87mvokOK72Vj.jpg",
     },
     {
       name: "Oliver",
@@ -56,15 +56,15 @@ const Testimonials = () => {
             >
               <div className="flex items-start gap-4 mb-4">
                 {/* Avatar Image */}
-                <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
-                  <img
-                    src={testimonial.avatar} // Unsplash URL or any image path
+                <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0">
+                  <Image
+                    src={testimonial.avatar}
                     alt={testimonial.name}
-                    width={48}
-                    height={48}
+                    fill
                     className="object-cover"
                   />
                 </div>
+
 
                 <div>
                   <h4 className="font-semibold">{testimonial.name}</h4>

@@ -33,7 +33,7 @@ const Pricing = () => {
       price: 20,
       features: [
         "6 video(s) / month",
-        "Text-based Q&A only",
+        "Vide based Q&A (higher limits)",
         "Adjust learning pace conditions",
         "1k words / call",
       ],
@@ -62,14 +62,14 @@ const Pricing = () => {
             >
               {/* Header */}
               <div className="mb-4 sm:mb-6">
-                <h3 className="text-lg sm:text-xl font-bold mb-1">{plan.name}</h3>
+                <h3 className="text-lg text-[#FBBF24] sm:text-xl font-bold mb-1">{plan.name}</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">{plan.subtitle}</p>
               </div>
 
               {/* Price */}
               <div className="mb-4 sm:mb-6">
-                <span className="text-2xl sm:text-4xl font-bold">${plan.price}</span>
-                <span className="text-sm sm:text-base text-muted-foreground"> /month</span>
+                <span className="text-2xl sm:text-4xl text-[#FBBF24] font-bold">${plan.price}</span>
+                <span className="text-sm sm:text-base text-[#FBBF24] text-muted-foreground"> /month</span>
               </div>
 
               {/* Features */}
