@@ -2,7 +2,7 @@ import Button from "@/app/components/button";
 import { FaPlay, FaCommentMedical } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-import { toast } from "react-hot-toast";
+
 
 const Hero = () => {
 
@@ -70,13 +70,9 @@ const Hero = () => {
         {/* CTA Buttons */}
         <div className="flex flex-row items-center justify-center gap-4">
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Link href="">
+            <Link href="/ComingSoon">
               <Button
-                onClick={() =>
-                  toast.success("Feature Coming Soon ", {
-                    className: "custom-toast",
-                  })
-                }
+
                 className="w-full sm:w-auto bg-[#7C3AED] hover:bg-[#6D28D9] text-white flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-md font-semibold transition-all duration-300 shadow-md"
               >
                 <FaCommentMedical className="w-4 h-4 text-white" />
@@ -84,13 +80,9 @@ const Hero = () => {
               </Button>
             </Link>
 
-            <Link href="">
+            <Link href="/ComingSoon">
               <Button
-                onClick={() =>
-                  toast.success("Feature Coming Soon ", {
-                    className: "custom-toast",
-                  })
-                }
+
                 className="w-full sm:w-auto bg-[#7C3AED] hover:bg-[#6D28D9] text-white flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-md font-semibold transition-all duration-300 shadow-md"
               >
                 <FaPlay className="w-4 h-4 text-white" />

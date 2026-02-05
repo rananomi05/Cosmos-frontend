@@ -1,5 +1,6 @@
 import Button from "@/app/components/button";
 import { FiCheck } from "react-icons/fi";
+import Link from "next/link";
 
 const Pricing = () => {
   const plans = [
@@ -32,8 +33,8 @@ const Pricing = () => {
       subtitle: "for Professionals",
       price: 20,
       features: [
-        "6 video(s) / month",
-        "Vide based Q&A (higher limits)",
+        "8 video(s) / month",
+        "Video based Q&A (higher limits)",
         "Adjust learning pace conditions",
         "1k words / call",
       ],
@@ -83,11 +84,13 @@ const Pricing = () => {
               </ul>
 
               {/* Button */}
-              <Button
-                className="w-full h-10 sm:h-12 bg-[#534dec] rounded-lg hover:opacity-90 transition-opacity text-sm sm:text-base"
-              >
-                {plan.cta}
-              </Button>
+              <Link href="/ComingSoon">
+                <Button
+                  className="w-full h-10 sm:h-12 bg-[#534dec] rounded-lg hover:opacity-90 transition-opacity text-sm sm:text-base"
+                >
+                  {plan.cta}
+                </Button>
+              </Link>
             </div>
           ))}
         </div>

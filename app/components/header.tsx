@@ -80,8 +80,8 @@ export default function Header() {
         </nav>
 
         {/* Desktop CTA Button */}
-        <Link href="" className="hidden md:block">
-          <Button onClick={() => toast.success("Feature Coming Soon ")} className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white flex items-center gap-2 px-5 py-2 rounded-lg text-md font-semibold transition-all duration-300 shadow-md">
+        <Link href="/ComingSoon" className="hidden md:block">
+          <Button className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white flex items-center gap-2 px-5 py-2 rounded-lg text-md font-semibold transition-all duration-300 shadow-md">
             <FaCommentMedical className="w-3 h-3 text-white" />
             <span>Try Beta Free</span>
           </Button>

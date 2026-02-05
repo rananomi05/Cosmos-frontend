@@ -10,7 +10,7 @@ const Testimonials = () => {
       role: "4th Sem Student ",
       quote:
         "I felt totally stuck when trying to get better at DSA. I've struggled with it since 1st year, but now I feel confident!",
-      avatar: "https://c8.alamy.com/comp/DJAB15/college-boy-holding-books-with-blurred-students-in-park-DJAB15.jpg",
+      avatar: "https://img.freepik.com/free-photo/school-boy-with-book-park_23-2148199240.jpg?semt=ais_hybrid&w=740&q=80",
     },
     {
       name: "Noah",
