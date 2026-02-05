@@ -36,7 +36,7 @@ const Pricing = () => {
         "8 video(s) / month",
         "Video based Q&A (higher limits)",
         "Adjust learning pace conditions",
-        "1k words / call",
+        "1k words / chat",
       ],
       cta: "Choose Plan",
       popular: false,
